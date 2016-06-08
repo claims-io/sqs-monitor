@@ -1,0 +1,32 @@
+# Logs
+*.log
+
+# Env config
+*.env
+*.env.test
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Tests
+test-results.xml
+coverage/
+test/mocha.opts
+
+# Build / package
+dist/
+
+# Dependency directory
+node_modules/
+
+# Uploads
+server/uploads/
+
+# Type definitions
+server/typings/**
+!server/typings/tsd.d.ts
+
+# Rethink
+rethinkdb_data/

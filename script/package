@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# script/package - packages the application for deployment
+
+# exit on sub-module failure
+set -e
+
+cd "$(dirname "$0")/.."
+
+# ------
+
+echo "Packaging..."
+
+docker build -t sqs-monitor .
+
+echo "Done packaging!"
+
+# ------

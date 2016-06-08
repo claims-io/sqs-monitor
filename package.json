@@ -1,0 +1,25 @@
+{
+  "name": "sqs-monitor",
+  "version": "1.0.0",
+  "description": "Monitor sqs queue(s) and notify slack if number of messages does not decrease",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"no tests\""
+  },
+  "keywords": [
+    "sqs",
+    "slack",
+    "monitor"
+  ],
+  "author": "rsantosdev",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.3.18",
+    "co": "^4.6.0",
+    "co-request": "^1.0.0",
+    "co-sleep": "0.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^2.0.0"
+  }
+}

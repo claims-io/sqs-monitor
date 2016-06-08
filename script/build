@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# script/builds - builds the release
+
+# exit on sub-module failure
+set -e
+
+cd "$(dirname "$0")/.."
+
+# ------
+
+sh script/clean
+
+# ------
+
+echo "Building..."
+
+mkdir dist
+cp package.json dist/
+cp -R server/*.js dist/
+
+cd dist
+npm install --production
+cd ..
+
+echo "Done building!"
+
+# ------
