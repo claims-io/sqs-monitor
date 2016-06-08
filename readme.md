@@ -9,6 +9,16 @@ The repository has the following folders:
 - `server` - The source for the monitor
 - `script` - Contains helper scripts (see below)
 
+Please provide the following ENV vars when running: (or create a .env file on root)
+
+AWS_KEY_ID
+AWS_KEY_SECRET
+AWS_QUEUE_NAME
+AWS_QUEUE_URL
+AWS_QUEUE_REGION
+
+SLACK_HOOK
+
 ### Scripts
 
 The below helper scripts are available for convenience:
