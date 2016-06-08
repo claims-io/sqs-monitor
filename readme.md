@@ -11,11 +11,11 @@ The repository has the following folders:
 
 Please provide the following ENV vars when running: (or create a .env file on root)
 
-AWS_KEY_ID
-AWS_KEY_SECRET
-AWS_QUEUE_NAME
-AWS_QUEUE_URL
-AWS_QUEUE_REGION
+- AWS_KEY_ID
+- AWS_KEY_SECRET
+- AWS_QUEUE_NAME
+- AWS_QUEUE_URL
+- AWS_QUEUE_REGION
 
 SLACK_HOOK
 
