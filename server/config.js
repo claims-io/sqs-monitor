@@ -8,6 +8,7 @@ module.exports = {
 
   retries: process.env.RETRIES || 5, // minimum of 1
   interval: process.env.INTERVAL || 2000, // in miliseconds
+  threshold: process.env.THRESHOLD || 3, // acceptable minimum of messages
 
   aws: {
     key: process.env.AWS_KEY_ID,

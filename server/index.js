@@ -21,7 +21,7 @@ co(function* () {
       yield sleep(config.interval);
     }
 
-    if (currentSize > 0 && currentSize >= initialSize) {
+    if (currentSize > config.threshold && currentSize >= initialSize) {
       yield _sendSlack(currentSize);
       console.log('Slack notified');
     }
