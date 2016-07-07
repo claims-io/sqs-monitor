@@ -10,8 +10,8 @@ const
 co(function* () {
   while (true) {
     // Get initial queue size
-    let initialSize = yield sqs.size(),
-      currentSize = 0;
+    let currentSize = 0,
+      isDecreasing = true;
 
     for (let i = 0; i < config.retries; i++) {
       // Get queue size
@@ -19,9 +19,12 @@ co(function* () {
 
       // Sleep between size calls
       yield sleep(config.interval);
+
+      let afterSleepSize = yield sqs.size();
+      isDecreasing = afterSleepSize < currentSize;
     }
 
-    if (currentSize > config.threshold && currentSize >= initialSize) {
+    if (!isDecreasing && currentSize > config.threshold) {
       yield _sendSlack(currentSize);
       console.log('Slack notified');
     }
